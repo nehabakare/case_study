@@ -1,0 +1,23 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Update Product Details</title>
+</head>
+
+<body>
+<h1> Update Product Details</h1>
+{% for item in data %}
+<form method="post" action="" enctype="multipart/form-data">
+    <p> Product ID : {{item[0]}}</p>
+    <p> SKU : <input type="text" name="sku" value='{{item[1]}}'></p>
+    <p> Product Description: <input type="text" name="prod_desc" value='{{item[2]}}'></p>
+    <p> Price : <input type="text" name="price" value='{{item[3]}}'></p>
+    <p> Order Date : <input type="text" name="order_date" value='{{item[4]}}'></p>
+    <p><input type="submit" value="Submit"></p>
+    {% endfor %}
+</form>
+</body>
+
+</html>
